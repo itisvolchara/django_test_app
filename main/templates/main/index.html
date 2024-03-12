@@ -1,0 +1,20 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+    <div class="features">
+        <h1>{{ title }}</h1>
+        <p>Здравствуйте,
+            {% if dict.name == 'Иван' %}
+                Олег
+            {% else %}
+                Иван
+            {% endif %}
+            {% filter upper %}(Но на самом деле Вы {% endfilter %}{{ dict.name }}) {{ dict.second_name }} {{ dict.surname }}</p>
+        <p>Тут должен быть гигантский текст</p>
+        <a href="{% url 'about' %}" class="btn btn-warning">На страницу о нас</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+    О нас
+{% endblock %}
+
+{% block body %}
+    <div class="features">
+        <h1>{{ title }}</h1>
+        <p>Оооох мы просто гигантская корпорация, лучше наших сотрудников работают только курьеры в самокате</p>
+        <a href="{% url 'home' %}" class="btn btn-warning">На главную</a>
+    </div>
+{% endblock %}

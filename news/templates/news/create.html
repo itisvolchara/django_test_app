@@ -1,0 +1,20 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Добавить новость! {% endblock %}
+
+{% block body %}
+    <div class="features">
+        <h1>Добавьте новость себе по вкусу!</h1>
+        <form method="post">
+            {% csrf_token %}
+            {% for input in form %}
+                {{ input }}<br>
+            {% endfor %}
+            {% if error != '' %}
+                <span>{{ error }}</span>
+            {% endif %}
+            <button type="submit" class="btn btn-success">Опубликовать!</button>
+        </form>
+
+    </div>
+{% endblock %}
